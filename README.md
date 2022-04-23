@@ -1,32 +1,27 @@
 # linux
-Linux kernel source tree
 
-Steps to reproduce
+Steps to Reproduce:
 
-Installed VMware workstation16
+1. Created a VM instance on GCP using below command
 
-Downloaded ubuntu iso
+gcloud compute instances create cmpe283-vm --enable-nested-virtualization --zone=us-west1-b --machine-type=n2-standard-8 --network-interface=network-tier=PREMIUM,subnet=default --create-disk=auto-delete=yes,boot=yes,device-name=instance-1,image=projects/ubuntu-os-cloud/global/images/ubuntu-2004-focal-v20220204,mode=rw,size=200,type=projects/sjsu-spring-2022/zones/us-central1-a/diskTypes/pd-ssd --metadata=ssh-keys=mlarkin:"...paste ssh key here..."
 
-Created a VM on VMware workstation and assigned RAM of 6GB and 80GB Disk Space,8 cores of processors
+Make sure you put your desired username and ssh key in the last part, eg:
 
-Used ubuntu iso image for the VM
+--metadata=ssh-keys=mlarkin:"...paste ssh key here..."
 
-Enabled nested virtualisation (Enable "Virtualize Intel VT-x/EPT or AMD- V/RVI" checkbox)
+2. Verified if nested virtualisation is installed properly by running the command "cat /proc/cpuinfo"
 
-Powered on the VM and installed ubuntu OS
+3. Installed htop, git
 
-Verified if nested virtualisation is installed properly by running the command "cat /proc/cpuinfo"
+4. Forked the git repo torvalds/linux and cloned it to the ubuntu VM
 
-Installed htop, git
+5. retrieve .c file and makefile from canvas
 
-Forked the git repo torvalds/linux and cloned it to the ubuntu VM
-
-retrieve .c file and makefile from canvas
-
-Add capability structs based on info from SDM and make calls to rdmsr and report_capability in the .c file
+6. Add capability structs based on info from SDM and make calls to rdmsr and report_capability in the .c file
 
 in the directory of the .c file and makefile, call 'make'
 
-call 'sudo insmode ./cmpe283-1.ko
+7. call 'sudo insmode ./cmpe283-1.ko
 
-call sudo dmesg to see capabilities
+8. call sudo dmesg to see capabilities
