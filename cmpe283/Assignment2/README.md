@@ -1,5 +1,7 @@
 #Assignment2
 
+Steps to Reproduce:
+
 Modifying Kernel code:
 
 Modify cpuid.c and vmx.c files accordingly to implement the given functionalities :
