@@ -38,12 +38,19 @@ and kvm-intel-module (kvm-intel.ko) using the following commands:
   
   
 #Testing 
-sudo apt-get update
-sudo apt install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils virt-manager
-sudo apt-get update
-sudo apt-get install cpuid
-Create test codes for all the functionalities in the inner with file name test_assignment2.c
-Now install gcc and compile the code using gcc
-test_Assignment2_3.c
-Now run the test file with ./a.out
 
+sudo apt-get update
+
+sudo apt install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils virt-manager
+
+sudo apt-get update
+
+sudo apt-get install cpuid
+
+Create test codes for all the functionalities in the inner with file name test_assignment2.c
+
+Now install gcc and compile the code using gcc
+
+test_Assignment2.c
+
+Now run the test file with ./a.out
