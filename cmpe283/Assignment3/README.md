@@ -48,6 +48,8 @@ Modify vmx.c and cpuid.c as per as the requirement.
 ![Alt text](https://github.com/sarat458/linux/blob/master/cmpe283/Assignment3/Output/ASSIGNMENT%203%20IMAGE%206.png "Optional title")
 
 ### Questions
+* Comment on the frequency of exits – does the number of exits increase at a stable rate? Or are there more exits performed during certain VM operations? Approximately how many exits does a full VM boot entail?
+  * Number of exits are increasing at a stable rate with 1000 increments in total exits, but later there was stability in the increment in the number of exits.
 * Which are the most frequent and less frequent exit types?
   * Most frquent - MSR_WRITE -Cycle count 4859559731
   * Less frequent - DR_ACCESS - Cycle count 7625
