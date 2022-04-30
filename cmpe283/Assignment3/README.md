@@ -47,3 +47,7 @@ Modify vmx.c and cpuid.c as per as the requirement.
 
 ![Alt text](https://github.com/sarat458/linux/blob/master/cmpe283/Assignment3/Output/ASSIGNMENT%203%20IMAGE%206.png "Optional title")
 
+### Questions
+* Which are the most frequent and less frequent exit types?
+  * Most frquent - MSR_WRITE -Cycle count 4859559731
+  * Less frequent - DR_ACCESS - Cycle count 7625
