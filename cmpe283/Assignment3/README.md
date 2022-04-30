@@ -49,7 +49,8 @@ Modify vmx.c and cpuid.c as per as the requirement.
 
 ### Questions
 * Comment on the frequency of exits – does the number of exits increase at a stable rate? Or are there more exits performed during certain VM operations? Approximately how many exits does a full VM boot entail?
-  * Number of exits are increasing at a stable rate with 1000 increments in total exits, but later there was stability in the increment in the number of exits. There are more exits performed certain vm operations. Total number of exits before are around 4300000 before reboot and after reboot 6000000
+  * Frequency of the time spent depends on the type of exit.The number of exits tends to increase if more privileged operations are performed by the system
+  * Frequency of the exits depends on the system use.The number of exit increases as more privileged operations are performed. 
 * Which are the most frequent and less frequent exit types?
   * Most frquent - MSR_WRITE -Cycle count 4859559731
   * Less frequent - DR_ACCESS - Cycle count 7625
